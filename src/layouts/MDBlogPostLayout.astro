@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
   <div>
     <div class="banner">
       <p>Written by <strong>{frontmatter.author}</strong></p>
-      <p>Published on: {frontmatter.publishedOn.toString().slice(0,10)}</p>
+      <p>Published on: {frontmatter.publishedOn.toLocaleDateString()}</p>
       <p><em>{frontmatter.description}</em></p>  
       <!-- Rel. tags -->
       <div class="tags">

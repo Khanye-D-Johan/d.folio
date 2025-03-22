@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MDBlogPostLayout.astro
 title: My Third Blog Post
 author: Johan Khanye
 description: "I had some challenges, but asking in the community really helped!"

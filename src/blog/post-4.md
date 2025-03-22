@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MDBlogPostLayout.astro
 title: My 4th Post
 author: Johan Khanye
 description: "Learning about Astro's built-in Typescript support!"
@@ -9,4 +8,4 @@ image:
 publishedOn: 2022-07-15
 tags: ["astro", "learning in public", "setbacks", "community"]
 ---
-This post should show up with my other blog posts, because `import.meta.glob()` is returning a list of all my posts in order to create my list.
+This post should show up with my other blog posts, because `getCollection` is returning a list of all my posts in order to create my list.

@@ -1,22 +1,21 @@
 ---
 // Imports.
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
 // frontmatter properties.
-const blogTags = [
-  ...new Set(
-    Object.values(import.meta.glob('../posts/*.md', { eager: true })
-  ).map((post:any)=>post.frontmatter.tags).flat())
-];
+const blogPosts = await getCollection("blog");
+
+const blogTags = [...new Set(blogPosts.map((post:any)=>post.data.tags).flat())];
 const title="Tags: Index";
 ---
 <BaseLayout pageTitle={title}>
-<!-- Content -->
-<div class="tags">
-  {blogTags.map((tag:any)=> 
-    <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
-  )}
-</div>
-
+  <!-- Content -->
+  <div class="tags">
+    {blogTags.map((tag:any)=> 
+      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+    )}
+  </div>
   <!-- Styling -->
   <style>
     .tag{
