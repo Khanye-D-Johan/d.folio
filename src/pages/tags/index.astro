@@ -1,0 +1,39 @@
+---
+// Imports.
+import BaseLayout from "../../layouts/BaseLayout.astro";
+// frontmatter properties.
+const blogTags = [
+  ...new Set(
+    Object.values(import.meta.glob('../posts/*.md', { eager: true })
+  ).map((post:any)=>post.frontmatter.tags).flat())
+];
+const title="Tags: Index";
+---
+<BaseLayout pageTitle={title}>
+<!-- Content -->
+<div class="tags">
+  {blogTags.map((tag:any)=> 
+    <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+  )}
+</div>
+
+  <!-- Styling -->
+  <style>
+    .tag{
+      background-color: #F8FCFD;
+      border: dotted 1px #a1a1a1;
+      border-radius: .5em;
+      font-size: 1.15em;
+      margin: 0.25em;
+      padding: .5em 1em;
+      text-transform: capitalize;
+    }
+
+    .tag>a{color: #00539F;}
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
+</BaseLayout>
