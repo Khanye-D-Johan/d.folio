@@ -1,30 +1,20 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import "../styles/global.css"
+// imports.
+import BlogPost from "../components/BlogPost.astro";
+import { getCollection } from "astro:content";
+import Layout from "../layouts/BaseLayout.astro";
 
-const pageTitle = "my Personal Dev. Learnings Blog"
+// frontmatter properties.
+const blogPosts = await getCollection('blog');
+const pageTitle = "Blog: Development & More"
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <Layout>
-      <!-- Nav links -->
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/blog">{pageTitle}</a>
+<Layout pageTitle={pageTitle}>
+  <p>This is where I will post about my journey learning Astro & other tech</p>
 
-      <h1 class="text-5xl font-bold">{pageTitle}</h1>
-      <p>This is where I will post about my journey learning Astro & other tech</p>
-
-      <ol>
-        <li><a href="/posts/post-1/">Post No.1</a></li>
-        <li><a href="/posts/post-2">Post No.2</a></li>
-        <li><a href="/posts/post-3">Post No.3</a></li>
-      </ol>
-    </Layout>
-  </body>
-</html>
+  <h2>Posts:</h2>
+  <ol>
+    {blogPosts.map((post:any) => 
+      <BlogPost url={`/posts/${post.id}`} title={post.data.title} />
+    )}
+  </ol>
+</Layout>
