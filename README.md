@@ -2,7 +2,7 @@
 [View Portfolio](https://khanyej.netlify.app/)
 
 ## 🧞 TODO - Getting started:
-- [ ] *_**Deploy site**_
+- [x] *_**Deploy site**_
 - [ ] Creating `.astro` pages:
   - [x] Home/About
   - [ ] Skills
