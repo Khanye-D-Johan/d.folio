@@ -1,19 +1,7 @@
 ---
 const { platform, username, pre="" } = Astro.props;
 ---
-<div style="display: inline;">
+<div class="font-semibold bg-black border border-sky-100 .dark:text-sky-300 .dark:border-sky-500/15 dark:bg-sky-500/10 inline-block px-2 py-0.5 rounded-sm" >
   <a href={`https://www.${platform}.com/${pre}${username}`} target="_blank">{platform}</a>
   <slot />
 </div>
-
-<style>
-  div {
-    margin-right: 0.5rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    color: white;
-    background-color: #4c1d95;
-    text-decoration: none;
-    text-transform: capitalize;
-  }
-</style>

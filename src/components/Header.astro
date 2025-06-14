@@ -1,12 +1,19 @@
 ---
 import Hamburger from "./Hamburger.astro";
 import ThemeIcon from "./ThemeIcon.astro";
-import Nav from "./Navigation.astro";
+import "../styles/global.css";
 ---
 <header>
-  <nav style="display: flex;">
-    <Hamburger />
-    <Nav />
-    <ThemeIcon />
+  <nav class="inline-block w-full font-medium text-lg">
+    <Hamburger/>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contacts</a>
+      <a href="/projects">Projects</a>
+      <span class="mx-4 hidden sm:inline"> | </span>
+      <a href="/blog">Blog</a>
+    </div>
+    <ThemeIcon/>
   </nav>
 </header>
