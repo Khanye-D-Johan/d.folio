@@ -9,7 +9,6 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
 	site: "https://khanyej.netlify.app/",
 	integrations: [
-		mdx(), sitemap(),
-		// preact()
+		mdx(), sitemap(), // preact()
 	],
 });

@@ -1,8 +1,12 @@
 ---
-import BaseTemplate from "../layouts/BaseLayout.astro";
+import BaseTemplate from "../layouts/BaseTemplate.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 // frontmatter props.
 const title = "Projects"
 ---
 <BaseTemplate pageTitle={title}>
-  <div class="vh-100 container border"></div>
+  <div class="container" style="min-height: 40em !important;">
+    <!-- Project -->
+    <ProjectCard />
+  </div>
 </BaseTemplate>

@@ -1,6 +1,6 @@
 ---
 // imports
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseTemplate from "../../layouts/BaseTemplate.astro";
 import BlogPost from "../../components/BlogPost.astro";
 import { getCollection } from "astro:content";
 // functions.
@@ -20,11 +20,11 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 
 ---
-<BaseLayout pageTitle={tag}>
+<BaseTemplate pageTitle={tag}>
   <p>Posts tagged w/ {tag}:</p>
   <ol>{
     posts.map((post: any)=>
       <BlogPost url={`/posts/${post.id}`} title={post.data.title} />
     )}
   </ol>
-</BaseLayout>
+</BaseTemplate>

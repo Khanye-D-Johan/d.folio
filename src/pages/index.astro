@@ -1,16 +1,13 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
-// import Greeting from '../components/Greeting';
-// Frontmatter Props.
-const title = "Welcome", pageTitle = "\"Welcome, I'm Johan.\"", 
-  subTitle = "Python Developer • Data Science & Engineering • Web Developer",
-  greetings = ["Saw'bona", "Dumela", "Hi", "Hello", "Bonjour"];
----
-<BaseLayout>
-	<div class="p-4">
-		<!--: Greetings TODO:-"Install `preact/hooks`" :-->
-		<!-- <Greeting client:load messages={greetings} /> -->
+import BaseTemplate from "../layouts/BaseTemplate.astro";
+import HeroSection from "../components/Hero.astro";
 
+// Frontmatter Props.
+const greetings = ["Saw'bona", "Dumela", "Hi", "Hello", "Bonjour"];
+---
+<BaseTemplate>
+	<HeroSection />
+	<div class="container p-4">
 		<!-- Page Banner -->
 		<div class="border-4 home-banner d-flex flex-column justify-items-center my-4 py-4 rounded-2 shadow-xl"
 		>
@@ -64,10 +61,10 @@ const title = "Welcome", pageTitle = "\"Welcome, I'm Johan.\"",
 			</div>
 		</div>
 	</div>
-</BaseLayout>
+</BaseTemplate>
 
 <!-- 
-<BaseLayout>
+<BaseTemplate>
 	<h1>🧑‍🚀 Hello, Astronaut!</h1>
 	<p>
 		Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
@@ -98,4 +95,4 @@ const title = "Welcome", pageTitle = "\"Welcome, I'm Johan.\"",
 		<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
 		by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
 	</p>
-</BaseLayout> -->
+</BaseTemplate> -->

@@ -1,6 +1,6 @@
 ---
 // Imports.
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseTemplate from "../../layouts/BaseTemplate.astro";
 import { getCollection } from "astro:content";
 
 // frontmatter properties.
@@ -9,7 +9,7 @@ const blogPosts = await getCollection("blog");
 const blogTags = [...new Set(blogPosts.map((post:any)=>post.data.tags).flat())];
 const title="Tags: Index";
 ---
-<BaseLayout pageTitle={title}>
+<BaseTemplate pageTitle={title}>
   <!-- Content -->
   <div class="tags">
     {blogTags.map((tag:any)=> 
@@ -35,4 +35,4 @@ const title="Tags: Index";
       flex-wrap: wrap;
     }
   </style>
-</BaseLayout>
+</BaseTemplate>
