@@ -7,27 +7,23 @@ import "../styles/global.css";
   <div class="container-fluid">
     <!-- Brand -->
     <a class="navbar-brand" href="/">
-      <img src="/src/img/favicon.png" aria-hidden="true"
+      <img src="/src/assets/images/favicon.png" aria-hidden="true"
         class="bi me-2 rounded-circle" style="height: 40px;width:40px;"
       >
       <span>JK D. Projects</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" 
-      aria-label="Toggle navigation"
-    >
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <!-- offcanvas navbar: text-bg-dark -->
-    <div class="offcanvas offcanvas-end" 
-      tabindex="-1" id="offcanvasNavbar2"
-      aria-labelledby="offcanvasNavbar2Label"
-    >
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
       <!-- Mobile `Branding` header x Close btn -->
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbar2Label">
-          <img src="/src/img/favicon.png" aria-hidden="true"
+          <img src="/src/assets/images/favicon.png" aria-hidden="true"
             class="bi me-2 rounded-circle" 
             style="height: 30px; width:30px;"
           >
@@ -38,65 +34,55 @@ import "../styles/global.css";
           aria-label="Close"
         ></button>
       </div>
+
       <!-- navbar body -->
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <!-- Home -->
+          <!--[ Home ]-->
           <li class="nav-item">
             <a class="nav-link active" 
               aria-current="page"
               href="/"
             >Home</a>
           </li>
-          <!-- About -->
+          <!--[ About ]-->
           <li class="nav-item">
-            <a class="nav-link"
-              href="/about"
+            <a class="nav-link" href="/about"
             >About</a>
           </li>
-          <!-- Contact -->
+          <!--[ Contact ]-->
           <li class="nav-item">
             <a class="nav-link"
               href="/contact"
             >Contact</a>
           </li>
-          <!-- About -->
+          <!--[ Projects ]-->
           <li class="nav-item">
-            <a class="nav-link"
-              href="/projects"
+            <a class="nav-link" href="/projects"
             >Projects</a>
           </li>
-          <!-- Dropdown  -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false"
-            >Dropdown</a>
-            <!-- Blog -->
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item"
-                  href="/blog"
-                >Blog</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  Another action
-                </a>
-              </li>
-              <li><hr class="dropdown-divider"></li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </li>
-            </ul>
+          <!--[ TBD: Feat ]-->
+          <li class="nav-item">
+            <a class="nav-link" href="/feat"
+            >TBD: Feat</a>
           </li>
-          <!-- nav-item: Dropdown  -->
+          <!--[ Blogs ]-->
+          <li class="nav-item">
+            <a class="nav-link" href="/blogs"
+            >Blogs</a>
+          </li>
+          <!--[ Blog ]-->
+          <li class="nav-item">
+            <a class="nav-link" href="/blog"
+            >Checkout my Blog</a>
+          </li>
         </ul>
-        <form class="d-flex mt-3 mt-lg-0" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <!--
+          <form class="d-flex mt-3 mt-lg-0" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> 
+        -->
       </div>
     </div>
   </div>
