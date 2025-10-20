@@ -1,28 +1,37 @@
 ---
 import "../styles/global.css";
 ---
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+<nav class="navbar navbar-expand-lg border-bottom" 
+  aria-label="JK D. Projects Large Navigation Bar"
+>
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"
-    >D. Portfolio</a>
-    <button class="navbar-toggler"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbar2"
-      aria-controls="offcanvasNavbar2" 
+    <!-- Brand -->
+    <a class="navbar-brand" href="/">
+      <img src="/src/img/favicon.png" aria-hidden="true"
+        class="bi me-2 rounded-circle" style="height: 40px;width:40px;"
+      >
+      <span>JK D. Projects</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" 
       aria-label="Toggle navigation"
-    ><span class="navbar-toggler-icon"></span>
+    >
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- offcanvas navbar -->
-    <div class="offcanvas offcanvas-end text-bg-dark" 
-      tabindex="-1" 
-      id="offcanvasNavbar2"
+
+    <!-- offcanvas navbar: text-bg-dark -->
+    <div class="offcanvas offcanvas-end" 
+      tabindex="-1" id="offcanvasNavbar2"
       aria-labelledby="offcanvasNavbar2Label"
     >
       <!-- Mobile `Branding` header x Close btn -->
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbar2Label"
-        >JK D.</h5>
+        <h5 class="offcanvas-title" id="offcanvasNavbar2Label">
+          <img src="/src/img/favicon.png" aria-hidden="true"
+            class="bi me-2 rounded-circle" 
+            style="height: 30px; width:30px;"
+          >
+          JK D. Projects</h5>
         <button type="button" 
           class="btn-close btn-close-white"
           data-bs-dismiss="offcanvas" 

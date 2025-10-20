@@ -1,8 +1,8 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 html, body {
   margin: 0;
   width: 100%;
@@ -17,8 +17,7 @@ html.dark {
   color: #fff;
 }
 body {
-  /* max-width: 80ch; */
-  padding: 1rem;
+  padding: 3px;
   line-height: 1.5;
 }
 

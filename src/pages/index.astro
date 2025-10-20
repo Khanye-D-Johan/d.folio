@@ -1,6 +1,72 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+// import Greeting from '../components/Greeting';
+// Frontmatter Props.
+const title = "Welcome", pageTitle = "\"Welcome, I'm Johan.\"", 
+  subTitle = "Python Developer • Data Science & Engineering • Web Developer",
+  greetings = ["Saw'bona", "Dumela", "Hi", "Hello", "Bonjour"];
 ---
+<BaseLayout>
+	<div class="p-4">
+		<!--: Greetings TODO:-"Install `preact/hooks`" :-->
+		<!-- <Greeting client:load messages={greetings} /> -->
+
+		<!-- Page Banner -->
+		<div class="border-4 home-banner d-flex flex-column justify-items-center my-4 py-4 rounded-2 shadow-xl"
+		>
+			<div class=" flex flex-col sm:flex-row sm:gap-8 items-center gap-6">
+				<!-- Image -->
+				<img class="img-fluid shadow rounded-circle ms-3" 
+					style="height: 200px;width:auto;"
+					src="src/img/profile.jpeg" 
+					alt="A profile picture of Johan with a big smile"
+				/>
+				<!-- Biography x Actions -->
+				<div class="m-2 d-block justify-items-center">
+					<!-- Biography -->
+					<div class="my-4 gap-2 px-3">
+						<legend class="mb-1 fw-light text-muted fs-2"
+						>Biography</legend>
+
+						<div class="container">
+							<p>
+								I am a problem-solver at heart, passionate about breaking down complex challenges and building efficient solutions. 
+								I started my journey as a developer in 2018 and have since gained experience in developing data-driven applications, 
+								specializing in both frontend and backend development.
+							</p>
+							<p>
+								As a mostly self-taught full-stack and data solutions developer, I have honed my skills in Python, PySpark, and JavaScript. 
+								Beyond development, I have collaborated with business-facing departments to consult on probable solutions, ensuring technical implementations align with business needs. 
+								I thrive in collaborative environments and enjoy working with others to create impactful, scalable solutions.
+							</p>
+							<p>
+								When I’m not coding, you’ll find me enjoying pizza, anime, and Coca-Cola. <em>A real "Otaku"</em>
+							</p>  
+						</div>
+					</div>
+					<!-- Actions -->
+					<div class="d-flex justify-content-center">
+						<!-- Prjcts -->
+						<a class="fw-semibold m-1 p-3 rounded-sm shadow-sm"
+							href="/projects"
+						>View My Projects</a>
+						<!--: PDF:CV :-->
+						<a class="fw-semibold m-1 p-3 rounded-sm shadow-sm"
+							href="src/docs/johan_khanye_cv.pdf" target="_blank"
+						>View my CV</a>
+						<!--: Contact :-->
+						<a class="fw-semibold m-1 p-3 rounded-sm shadow-sm"
+							href="/contact"
+						>Let’s Connect</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</BaseLayout>
+
+<!-- 
 <BaseLayout>
 	<h1>🧑‍🚀 Hello, Astronaut!</h1>
 	<p>
@@ -32,4 +98,4 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 		<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
 		by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
 	</p>
-</BaseLayout>
+</BaseLayout> -->
