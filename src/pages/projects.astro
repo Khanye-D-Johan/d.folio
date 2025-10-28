@@ -1,12 +1,45 @@
 ---
 import BaseTemplate from "../layouts/BaseTemplate.astro";
-import ProjectCard from "../components/ProjectCard.astro";
-// frontmatter props.
-const title = "Projects"
+import Carousel from "../components/Carousel.astro";
 ---
-<BaseTemplate pageTitle={title}>
-  <div class="container" style="min-height: 40em !important;">
-    <!-- Project -->
-    <ProjectCard />
-  </div>
+<BaseTemplate>
+  <Carousel />
+  <section class="py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Welcome to Astro + Bootstrap 5</h1>
+      <p class="lead mt-3">A fast, clean, component-based site using Bootstrap utilities.</p>
+      <a href="#" class="btn btn-light btn-lg mt-4">Get Started</a>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Astro</h5>
+            <p class="card-text">Blazing fast static & hybrid web framework.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap 5</h5>
+            <p class="card-text">Responsive, mobile-first, and customizable UI components.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Hybrid Power</h5>
+            <p class="card-text">Combine Astro’s static performance with Bootstrap’s rapid design.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseTemplate>

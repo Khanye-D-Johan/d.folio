@@ -1,25 +1,45 @@
 ---
 import "../styles/global.css";
+import { Image } from "astro:assets";
+import ImageP from "../assets/images/profile.jpeg"
 ---
 <!--[ Hero Section ]-->
-<section class="mt-3 py-5 text-center">
-  <div class="container">
-    <legend class="display-3 text-center">Welcome!</legend>
-    <h1 class="fs-3 fw-light"
-    >Python Developer • Data Science & Engineering • Web Developer</h1>
+<section class="container mt-4 text-center">
+  <div class="row">
+    <!-- Image -->
+    <div class="col-12 col-md-4 py-5 mt-md-4">
+      <Image class="img-fluid shadow rounded-circle ms-3" 
+        style="height: 200px;width:auto;"
+        src={ImageP} 
+        alt="A profile of Johan with a big smile"
+        loading="eager"
+        fetchpriority="high"
 
-    <div class="text-start">
-      <p class="lead pt-0 ps-md-3 ps-1">
-        <span class="text-muted"><small>Headline</small></span><br>
-        <em>“Python & Data Engineer | Building Scalable Data Pipelines and Web Apps”</em>
+      />
+    </div>
+    <!-- Hero -->
+    <div class="col-12 col-md-8 px-md-5 pt-md-5">
+      <!-- Headline -->
+      <div class="fs-3 fw-light pt-2">
+        <p class="lead pt-0 ps-md-3 ps-1"><em
+          >Python & Web App Development • Data engineering & sciences</em>
+        </p>
+      </div>
+      <!-- Intro sentence -->
+      <p class="container fs-6 lead ">
+        I’m a data engineer and web developer who builds fast, efficient, scalable, and user-friendly digital solutions — from scalable data pipelines, turning raw data into actionable insights, to full-stack web apps.
       </p>
-    </div>   
-
-    <p class="lead mt-3">
-      “I help businesses keep up with the competition through building efficient digital solutions
-      & turning raw data into actionable insights.”
-    </p>
-    <a href="/contact" class="btn btn-primary btn-md mt-4 w-50"
-    >Contact Me</a>
+      <!-- Call-to-action buttons -->
+      <p class="w-sm-50 px-2 pt-3">
+        <!-- Contact Me -->
+        <a href="/contact" class="btn btn-primary mb-2">
+          🎯 Hire Me
+        </a>
+        <!-- View Resume -->
+        <a href="src/docs/johan_khanye_cv.pdf" target="_blank" class="btn btn-info mb-2">
+          💼 Download Resume
+        </a>
+      </p>
+    </div>
   </div>
 </section>

@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import { Image } from "astro:assets";
+import faviconPic from "../assets/images/favicon.png"
 ---
 <nav class="navbar navbar-expand-lg border-bottom" 
   aria-label="JK D. Projects Large Navigation Bar"
@@ -7,8 +9,13 @@ import "../styles/global.css";
   <div class="container-fluid">
     <!-- Brand -->
     <a class="navbar-brand" href="/">
-      <img src="/src/assets/images/favicon.png" aria-hidden="true"
-        class="bi me-2 rounded-circle" style="height: 40px;width:40px;"
+      <Image src={faviconPic}
+        loading="eager"
+        fetchpriority="high"
+        aria-hidden="true"
+        alt="favicon"
+        class="bi me-2 rounded-circle" 
+        style="height: 40px;width:40px;"
       >
       <span>JK D. Projects</span>
     </a>
@@ -22,10 +29,16 @@ import "../styles/global.css";
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
       <!-- Mobile `Branding` header x Close btn -->
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbar2Label">
-          <img src="/src/assets/images/favicon.png" aria-hidden="true"
+        <h5 class="offcanvas-title" id="offcanvasNavbar2Label"
+          aria-labelledby="Mobile Branding header"
+        >
+          <Image src={faviconPic}
+            loading="eager"
+            fetchpriority="high"
+            aria-hidden="true"
+            alt="favicon"
             class="bi me-2 rounded-circle" 
-            style="height: 30px; width:30px;"
+            style="height: 40px;width:40px;"
           >
           JK D. Projects</h5>
         <button type="button" 
@@ -42,38 +55,50 @@ import "../styles/global.css";
           <li class="nav-item">
             <a class="nav-link active" 
               aria-current="page"
+              aria-label="Navigation Home"
               href="/"
             >Home</a>
           </li>
           <!--[ About ]-->
           <li class="nav-item">
-            <a class="nav-link" href="/about"
+            <a class="nav-link" 
+              aria-label="Navigation About"
+              href="/about"
             >About</a>
           </li>
           <!--[ Contact ]-->
           <li class="nav-item">
             <a class="nav-link"
+              aria-label="Navigation Contact"
               href="/contact"
             >Contact</a>
           </li>
           <!--[ Projects ]-->
           <li class="nav-item">
-            <a class="nav-link" href="/projects"
+            <a class="nav-link" 
+              aria-label="Navigation Projects"
+              href="/projects"
             >Projects</a>
           </li>
           <!--[ TBD: Feat ]-->
           <li class="nav-item">
-            <a class="nav-link" href="/feat"
+            <a class="nav-link" 
+              aria-label="Navigation TBD"
+              href="/feat"
             >TBD: Feat</a>
           </li>
           <!--[ Blogs ]-->
           <li class="nav-item">
-            <a class="nav-link" href="/blogs"
+            <a class="nav-link" 
+              aria-label="Navigation Blogs"
+              href="/blogs"
             >Blogs</a>
           </li>
           <!--[ Blog ]-->
           <li class="nav-item">
-            <a class="nav-link" href="/blog"
+            <a class="nav-link" 
+              aria-label="Navigation Blogs."
+              href="/blog"
             >Checkout my Blog</a>
           </li>
         </ul>

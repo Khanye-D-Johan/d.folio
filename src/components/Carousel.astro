@@ -1,0 +1,77 @@
+---
+// Images
+import { Image } from "astro:assets";
+import myTeam from "../assets/images/myteam.jpg";
+import underConstr from "../assets/images/under_construction.svg";
+---
+<!-- Carousel -->
+<section id="dFolioCarousel" class="carousel slide mb-6 py-4" data-bs-ride="carousel">
+  <!-- {# Carousel Indicators #} -->
+  <div class="carousel-indicators"> 
+    <button type="button" data-bs-target="#dFolioCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> 
+    <button type="button" data-bs-target="#dFolioCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button> 
+    <button type="button" data-bs-target="#dFolioCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button> 
+  </div>
+
+  <!-- {# Carousel Inner #}  -->
+  <div class="carousel-inner">
+    <!-- {# 1st Image #} -->
+    <div class="carousel-item active">
+      <Image fetchpriority="high" aria-hidden="true"
+        alt="my-team" class="bi me-2 img-fluid" src={myTeam}
+      />
+      <div class="container">
+        <div class="carousel-caption text-start text-white bg-dark bg-opacity-50">
+          <h1>Example headline.</h1>
+          <p class="opacity-100">
+            Some representative placeholder content for the first slide of the
+            carousel.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Image 2 -->
+    <div class="carousel-item">
+      <Image fetchpriority="high" aria-hidden="true"
+        alt="site under-construction" class="bi me-2 img-fluid" 
+        src={underConstr}
+      />
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>This portfolio is under construction.</h1>
+          <p>Some representative placeholder content for the second slide of the carousel.</p>
+          <p>
+            <a class="btn btn-lg btn-primary" href="#">Learn more</a>
+          </p>
+        </div>
+      </div> 
+    </div>
+    <div class="carousel-item"> 
+      <!-- {# Image #} -->
+      <svg aria-hidden="true" class="bd-placeholder-img " 
+      height="100%" preserveAspectRatio="xMidYMid slice" width="100%"
+      xmlns="http://www.w3.org/2000/svg">
+        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      </svg>
+      <div class="container">
+        <div class="carousel-caption text-end">
+          <h1>One more for good measure.</h1> 
+          <p>Some representative placeholder content for the third slide of this carousel.</p>
+          <p>
+            <a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- {# Previous Cntrl #} -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#dFolioCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <!-- {# Next Cntrl #} -->
+  <button class="carousel-control-next" type="button" data-bs-target="#dFolioCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span> 
+    <span class="visually-hidden">Next</span> 
+  </button> 
+</section>

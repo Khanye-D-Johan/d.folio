@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import SvgSymbols from "./SvgSymbols.astro";
+import faviconPic from "../assets/images/favicon.png";
 const today = new Date();
 ---
 <SvgSymbols />
@@ -23,18 +25,6 @@ const today = new Date();
         href="/feat"
       >TBD: Feat</a>
     </li>
-    <!-- TBD: Pricing -->
-    <li class="nav-item">
-      <a href="#" 
-        class="nav-link px-2 text-body-secondary"
-      >Pricing</a>
-    </li>
-    <!-- TBD: FAQs -->
-    <li class="nav-item">
-      <a href="#"
-        class="nav-link px-2 text-body-secondary"
-      >FAQs</a>
-    </li>
     <!-- About -->
     <li class="nav-item">
       <a href="/about"
@@ -47,16 +37,17 @@ const today = new Date();
     class="d-flex flex-wrap justify-content-between align-items-center border-top py-3 mb-3"
   >
     <!-- Branding & Copyrights -->
-    <div class="col-md-4 d-flex align-items-center">
+    <div class="col-md-6 d-flex align-items-center">
       <a href="/"
         class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" 
         aria-label="Bootstrap"
       >
-        <img class="bi rounded-circle"
-          alt="JK D. Projects logo"
-          src="/src/assets/images/favicon.png"
-          style="height: 40px; width: 40px;"
+        <Image src={faviconPic}
+          fetchpriority="high"
           aria-hidden="true"
+          alt="favicon"
+          class="bi me-2 rounded-circle" 
+          style="height: 40px;width:40px;"
         />
       </a>
       <span class="mb-3 mb-md-0 text-body-secondary text-center">
@@ -64,7 +55,7 @@ const today = new Date();
 			</span>
     </div>
     <!-- Socials -->
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex"
+    <ul class="nav col-12 col-md-6 justify-content-end list-unstyled d-flex"
     >
       <!-- Discord -->
       <li class="ms-3">
@@ -121,7 +112,7 @@ const today = new Date();
       </li>
       <!-- Facebook -->
       <li class="ms-3">
-        <a class="text-body-secondary" href="#" aria-label="Facebook">
+        <a class="text-body-secondary" href="www.Facebook.com" aria-label="Facebook">
           <svg class="bi" width="30" height="30"
 					><use xlink:href="#facebook"></use></svg>
         </a>

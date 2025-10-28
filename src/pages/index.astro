@@ -1,65 +1,165 @@
 ---
 import BaseTemplate from "../layouts/BaseTemplate.astro";
 import HeroSection from "../components/Hero.astro";
-
-// Frontmatter Props.
 const greetings = ["Saw'bona", "Dumela", "Hi", "Hello", "Bonjour"];
 ---
-<BaseTemplate>
-	<HeroSection />
-	<div class="container p-4">
-		<!-- Page Banner -->
-		<div class="border-4 home-banner d-flex flex-column justify-items-center my-4 py-4 rounded-2 shadow-xl"
-		>
-			<div class=" flex flex-col sm:flex-row sm:gap-8 items-center gap-6">
-				<!-- Image -->
-				<img class="img-fluid shadow rounded-circle ms-3" 
-					style="height: 200px;width:auto;"
-					src="src/assets/images/profile.jpeg" 
-					alt="A profile picture of Johan with a big smile"
-				/>
-				<!-- Biography x Actions -->
-				<div class="m-2 d-block justify-items-center">
-					<!-- Biography -->
-					<div class="my-4 gap-2 px-3">
-						<legend class="mb-1 fw-light text-muted fs-2"
-						>Biography</legend>
+<BaseTemplate title="Home | Johan Khanye">
+	<!-- Banner -->
+	<section class=" text-center pt-5">
+		<legend class="display-3 text-center pt-md-4"
+		  aria-label="Hello, Welcome!"
+		>Hello, Welcome!</legend>
+    <center><hr class="w-50"></center>
+		<h1 class="display-5 fw-bold"
+		  aria-label="Data Engineer & Full-Stack Developer"
+		>Data Engineer & Full-Stack Developer</h1>
 
-						<div class="container">
-							<p>
-								I am a problem-solver at heart, passionate about breaking down complex challenges and building efficient solutions. 
-								I started my journey as a developer in 2018 and have since gained experience in developing data-driven applications, 
-								specializing in both frontend and backend development.
+		<div class="d-flex justify-content-center gap-3 mt-4">
+			<a href="/projects"
+			  class="btn btn-primary"
+				aria-labelledby="View My Work"
+			>View My Work</a>
+			<a href="/contact"
+				aria-labelledby="Hire Me"
+			  class="btn btn-outline-secondary"
+			>Hire Me</a>
+		</div>
+	</section>
+	<!-- Hero -->
+	<HeroSection />
+
+	<div class="">
+		<!-- About -->
+		<section id="about" class="py-4	">
+			<legend class="text-muted fs-2">About Me</legend>
+			<!-- Biography -->
+			<div class="py-3 justify-items-center">
+				<!-- Biography -->
+				<figure class="border-start border-3 px-3">
+					<blockquote class="blockquote">
+						<p>
+							I’m Johan Khanye, a data engineer and web developer with experience building production-ready systems that handle millions of records daily.
+						</p>
+						<p>
+							My focus is on crafting efficient, data-driven solutions, from automated data pipelines to interactive web applications. I combine solid backend engineering with clean, user-friendly design to deliver solutions that scale with your business needs.
+						</p>
+					</blockquote>
+				</figure>
+				<!-- Core Skills: -->
+				<div class="">
+					<legend class="fw-bold my-2 text-muted fs-5"
+					>Core Skills:</legend>
+					<p class="text mt-3 text-md-start">
+						Python • Django • SQL • Spark • Databricks • Azure Cloud • AWS • Docker • Nginx • Web Apps • Data Pipelines • APIs
+					</p>
+				</div>
+				<center><hr class="w-75"></center>
+				<!-- Actions -->
+				<div class="d-flex justify-content-center gap-2 my-2 py-2">
+					<!-- Prjcts -->
+					<a class="fw-semibold border border-2 p-2 px-3 btn btn-sm shadow-sm border-white"
+						href="/projects"
+					>View My Projects</a>
+					<!--: PDF:CV :-->
+					<a class="fw-semibold p-2 btn btn-sm border border-2 px-3 shadow-sm border-white"
+						href="src/docs/johan_khanye_cv.pdf"
+						target="_blank"
+					>View my CV</a>
+					<!--: Contact :-->
+					<a 
+						class="fw-semibold p-2 btn btn-sm border border-2 border-white px-3 shadow-sm "
+						href="/contact"
+					>Let’s Connect</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services -->
+		<section class=" py-4">
+			<h1 class="fw-bold text-muted text-center mb-5">Services</h1>
+			<div class="row g-4 shadow shadow-xl">
+        <div class="col-sm-6 col-md-3">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+							<h5>Web Development</h5>
+							<p class="border-start border-3 px-3">
+								Modern, responsive, and performant web apps tailored for your business.
 							</p>
-							<p>
-								As a mostly self-taught full-stack and data solutions developer, I have honed my skills in Python, PySpark, and JavaScript. 
-								Beyond development, I have collaborated with business-facing departments to consult on probable solutions, ensuring technical implementations align with business needs. 
-								I thrive in collaborative environments and enjoy working with others to create impactful, scalable solutions.
-							</p>
-							<p>
-								When I’m not coding, you’ll find me enjoying pizza, anime, and Coca-Cola. <em>A real "Otaku"</em>
-							</p>  
 						</div>
 					</div>
-					<!-- Actions -->
-					<div class="d-flex justify-content-center">
-						<!-- Prjcts -->
-						<a class="fw-semibold m-1 p-3 rounded-sm shadow-sm"
-							href="/projects"
-						>View My Projects</a>
-						<!--: PDF:CV :-->
-						<a class="fw-semibold m-1 p-3 rounded-sm shadow-sm"
-							href="src/docs/johan_khanye_cv.pdf" target="_blank"
-						>View my CV</a>
-						<!--: Contact :-->
-						<a class="fw-semibold m-1 p-3 rounded-sm shadow-sm"
-							href="/contact"
-						>Let’s Connect</a>
+				</div>
+
+				<div class="col-sm-6 col-md-3">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+							<h5>Data Engineering</h5>
+							<p class="border-start border-3 px-3">
+								Streamlined ETL processes and cloud data pipelines for smarter insights.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-3">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+							<h5>System Optimization</h5>
+							<p class="border-start border-3 px-3">
+								Reduce processing time, improve reliability, and scale efficiently.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-3">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+							<h5>Consulting & Support</h5>
+							<p class="border-start border-3 px-3">
+								Get expert advice and hands-on help for your next tech project.
+							</p>
+						</div>
 					</div>
 				</div>
 
 			</div>
-		</div>
+		</section>
+		<!-- projects -->
+		<section id="projects" class="py-4">
+			<h2 class="fw-bold text-muted text-center mb-5"
+			>Featured Projects</h2>
+			<div class="row g-4 shadow shadow-xl py-3">
+				<div class="col-md-6 col-lg-4">
+					<div class="card h-100 shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">SmartShop PWA</h5>
+							<p class="card-text">
+								A progressive web app for local eCommerce stores, built with Django + Bootstrap.
+							</p>
+							<p class="small text-muted">Tech: Django, REST API, Bootstrap 5, PostgreSQL</p>
+							<a href="/projects/smartshop" class="btn btn-sm btn-primary">View Project</a>
+						</div>
+					</div>
+				</div>
+				<!-- Add more project cards as needed -->
+			</div>
+		</section>
+		<!-- contact -->
+		<section id="contact" class="bg-dark text-light px-3 py-5 text-center">
+			<div class="">
+				<h2 class="fw-bold mb-3">Let’s Build Something Great</h2>
+				<p class="lead mb-4">
+					Have a project in mind or need help building your next web or data solution?
+				</p>
+				<a href="/contact" class="btn btn-light btn-lg">
+					Get In Touch
+				</a>
+				<a href="src/docs/johan_khanye_cv.pdf" class="btn btn-outline-light btn-lg ms-3">
+					Download CV
+				</a>
+			</div>
+		</section>
+
 	</div>
 </BaseTemplate>
 
