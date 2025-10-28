@@ -1,0 +1,45 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets";
+import ImageP from "../assets/images/profile.jpeg"
+---
+<!--[ Hero Section ]-->
+<section class="container mt-4 text-center">
+  <div class="row">
+    <!-- Image -->
+    <div class="col-12 col-md-4 py-5 mt-md-4">
+      <Image class="img-fluid shadow rounded-circle ms-3" 
+        style="height: 200px;width:auto;"
+        src={ImageP} 
+        alt="A profile of Johan with a big smile"
+        loading="eager"
+        fetchpriority="high"
+
+      />
+    </div>
+    <!-- Hero -->
+    <div class="col-12 col-md-8 px-md-5 pt-md-5">
+      <!-- Headline -->
+      <div class="fs-3 fw-light pt-2">
+        <p class="lead pt-0 ps-md-3 ps-1"><em
+          >Python & Web App Development • Data engineering & sciences</em>
+        </p>
+      </div>
+      <!-- Intro sentence -->
+      <p class="container fs-6 lead ">
+        I’m a data engineer and web developer who builds fast, efficient, scalable, and user-friendly digital solutions — from scalable data pipelines, turning raw data into actionable insights, to full-stack web apps.
+      </p>
+      <!-- Call-to-action buttons -->
+      <p class="w-sm-50 px-2 pt-3">
+        <!-- Contact Me -->
+        <a href="/contact" class="btn btn-primary mb-2">
+          🎯 Hire Me
+        </a>
+        <!-- View Resume -->
+        <a href="src/docs/johan_khanye_cv.pdf" target="_blank" class="btn btn-info mb-2">
+          💼 Download Resume
+        </a>
+      </p>
+    </div>
+  </div>
+</section>

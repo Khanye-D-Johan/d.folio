@@ -1,72 +1,55 @@
 ---
-import "../styles/global.css"
-import Layout from "../layouts/BaseLayout.astro";
-
-const pageTitle = "About JoJo";
-const identity = {
-  firstName: "Johan",
-  country: "Azania",
-  occupation: "Product Developer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = true;
-const goal = 3;
-
-const skillColor = 'gray';
-const fontWeight = "bold";
-const textCase = "uppercase";
+import BaseTemplate from '../layouts/BaseTemplate.astro';
 ---
-<Layout pageTitle={pageTitle}>
-  <!-- About Page styling -->
-  <style is:global define:vars={{skillColor, fontWeight, textCase}}>
-    html,
-    body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-    }
-    h1 {
-      color: purple;
-      font-size: 4rem;
-      margin-bottom: 1rem;
-    }
-    h2, h3 {
-      margin-top: 1rem;
-    }
-    .skill {
-      color: var(--skillColor);
-      font-weight: var(--fontWeight);
-      text-transform: var(--textCase);
-    }
-  </style>
 
-  <!-- About Page content  -->
-  <h2>This is my new Astro site!</h2>
-  <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-  <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
+<BaseTemplate
+	title="About Me"
+	pubDate={new Date('August 08 2021')}
+>
+	<div class="container p-4 mt-3">
+		<legend class="display-4">About Me</legend>
+	</div>
+	<div class="container p-4">
+		<!-- Page Banner -->
+		<div class="border-4 home-banner d-flex flex-column justify-items-center mt-4 pt-4 rounded-2 shadow-xl"
+		>
+			<div class=" flex flex-col sm:flex-row sm:gap-8 items-center gap-6">
+				<!-- Image -->
+				<img class="img-fluid shadow rounded-circle ms-3" 
+					style="height: 200px;width:auto;"
+					src="src/assets/images/profile.jpeg" 
+					alt="A profile picture of Johan with a big smile"
+				/>
+				<!-- Biography x Actions -->
+				<div class="m-2 d-block justify-items-center">
+					<!-- Biography -->
+					<div class="my-4 gap-2 px-3">
+						<legend class="mb-1 fw-light text-muted fs-2"
+						>Biography</legend>
 
-  <!-- JS Exps. -->
-  <p>Here are a few facts about me:</p>
-  <ul>
-    <li>My name is {identity.firstName}.</li>
-    <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-    {identity.hobbies.length >= 2 &&
-      <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-    }
-  </ul>
+						<div class="container p-4">
+							<p>
+								I am a problem-solver at heart, passionate about breaking down complex challenges and building efficient solutions. 
+								I started my journey as a developer in 2018 and have since gained experience in developing data-driven applications, 
+								specializing in both frontend and backend development.
+							</p>
+							<p>
+								As a mostly self-taught full-stack and data solutions developer, I have honed my skills in Python, PySpark, and JavaScript. 
+								Beyond development, I have collaborated with business-facing departments to consult on probable solutions, ensuring technical implementations align with business needs. 
+								I thrive in collaborative environments and enjoy working with others to create impactful, scalable solutions.
+							</p>
+							<p>
+								When I’m not coding, you’ll find me enjoying pizza, anime, and Coca-Cola. An<em> "Otaku"</em>
+							</p>  
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  <h3 class="text-3xl font-bold underline">My skills are:</h3>
-  <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-  </ul>
+		<div class="container pt-3 pb-5">
+			<legend class="display-6">Skills</legend>
+		</div>
 
-  <!-- Cond. rendering -->
-  <h3 class="text-2xl font-bold underline">Conditional rendering</h3>
-  { happy && <p>The boy is very Happy!</p> }
-  { finished && <p>I have finished the astro intro tutorial!</p> }
-  { goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-</Layout>
-    
+	</div>
+</BaseTemplate>

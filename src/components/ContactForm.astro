@@ -1,0 +1,77 @@
+---
+import "../styles/global.css";
+---
+<section class="form-section h-100 d-flex align-items-center py-4">
+  <div class="contact-me-form w-100 m-auto">
+    <h1 class="display-3 fw-light">Hire Me</h1>
+    <hr>
+
+    <div class="">
+      <p class="">
+        <a class="btn border mb-2" href="mailto:khanyejohan@gmail.com">Gmail: khanyejohan@</a>
+        <a class="btn border mb-2" href="#">Github: KhanyeDJohan</a>
+        <a class="btn border mb-2" href="#">LinkedIn: Johan Khanye</a>
+        <a class="btn border mb-2" href="#">WhatsApp: TBD</a>
+        <a class="btn border mb-2" href="#">X <small>Twitter</small></a>
+        <a class="btn border mb-2" href="#">Instagram</a>
+        <a class="btn border mb-2" href="#">Discord</a>
+        <a class="btn border mb-2" href="#">Facebook</a>
+      </p>
+    </div>
+
+    <hr class="my-4">
+
+    <form action="mb-3">
+      <div class="row g-1">
+        <div class="col-6">
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingEmail" placeholder="name@eaddress.com">
+            <label for="floatingEmail">Email address</label>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="floatingSubject" placeholder="Join my team">
+            <label for="floatingSubject">Subject</label>
+          </div>
+        </div>
+        <div class="col-12 my-2">
+          <div class="form-floating">
+            <textarea rows="4" style="height: 150px;" id="context"  class="form-control"></textarea>
+            <label for="context">Anything and everything</label>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary w-100 py-2" type="submit">Send</button>
+    </form>
+
+  </div>
+</section>
+
+<style>
+  .form-section {
+    height: 100%;
+  }
+
+  .contact-me-form {
+    max-width: 430px;
+    padding: 1rem;
+  }
+
+  .contact-me-form .form-floating:focus-within {
+    z-index: 2;
+  }
+
+  /* .contact-me-form input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .form-signin input[type="text"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  } */
+
+</style>

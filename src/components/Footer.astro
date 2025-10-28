@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import Social from "./Socials.astro";
 ---
 <footer class="mt-4 mb-4 flex items-center">
@@ -25,5 +26,126 @@ import Social from "./Socials.astro";
         </path>
       </svg>
     </Social>
+=======
+import { Image } from "astro:assets";
+import SvgSymbols from "./SvgSymbols.astro";
+import faviconPic from "../assets/images/favicon.png";
+const today = new Date();
+---
+<SvgSymbols />
+<footer class="px-sm-4 py-3 my-4 border-top">
+  <!-- Quick links -->
+  <ul class="nav justify-content-center pb-3">
+    <!-- Home -->
+    <li class="nav-item">
+      <a href="/" class="nav-link px-2 text-body-secondary"
+			>Home</a>
+    </li>
+    <!-- Contact -->
+    <li class="nav-item">
+      <a class="nav-link px-2 text-body-secondary"
+        href="/contact"
+      >Contact</a>
+    </li>
+    <!-- TBD: Quick Link: Action -->
+    <li class="nav-item">
+      <a class="nav-link px-2 text-body-secondary"
+        href="/feat"
+      >TBD: Feat</a>
+    </li>
+    <!-- About -->
+    <li class="nav-item">
+      <a href="/about"
+        class="nav-link px-2 text-body-secondary"
+      >About</a>
+    </li>
+  </ul>
+  <!-- Branding x Socials -->
+  <div
+    class="d-flex flex-wrap justify-content-between align-items-center border-top py-3 mb-3"
+  >
+    <!-- Branding & Copyrights -->
+    <div class="col-md-6 d-flex align-items-center">
+      <a href="/"
+        class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" 
+        aria-label="Bootstrap"
+      >
+        <Image src={faviconPic}
+          fetchpriority="high"
+          aria-hidden="true"
+          alt="favicon"
+          class="bi me-2 rounded-circle" 
+          style="height: 40px;width:40px;"
+        />
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary text-center">
+				&copy; {today.getFullYear()} D. Projects Inc. All rights reserved.
+			</span>
+    </div>
+    <!-- Socials -->
+    <ul class="nav col-12 col-md-6 justify-content-end list-unstyled d-flex"
+    >
+      <!-- Discord -->
+      <li class="ms-3">
+        <a class="text-body-secondary" 
+          aria-label="Discord"
+          href="https://www.discord.com/users/1353107180592824350" 
+          target="_blank" 
+        >
+          <svg class="bi" width="30" height="30"
+					><use xlink:href="#discord"></use></svg>
+        </a>
+      </li>
+      <!-- Github -->
+      <li class="ms-3">
+        <a class="text-body-secondary"
+          href="https://www.github.com/Khanye-D-Johan"
+          target="_blank"
+          aria-label="Github">
+          <svg class="bi" width="30" height="30"
+					><use xlink:href="#alt-github"></use></svg>
+        </a>
+      </li>
+      <!-- LinkedIn -->
+      <li class="ms-3">
+        <a class="text-body-secondary"
+          aria-label="LinkedIn"
+          href="https://www.linkedIn.com/in/johan-khanye"
+          target="_blank" 
+        >
+          <svg class="bi" width="30" height="30"
+          ><use xlink:href="#linkedin"></use></svg>
+        </a>
+      </li>
+      <!-- X -->
+      <li class="ms-3">
+        <a class="text-body-secondary"
+          aria-label="X/(formerly: Twitter)"
+          href="https://www.x.com/johan_prodigal"
+          target="_blank"
+        >
+          <svg class="bi" width="30" height="30"
+          ><use xlink:href="#x-twitter"></use></svg>
+        </a>
+      </li>
+      <!-- Instagram -->
+      <li class="ms-3">
+        <a aria-label="Instagram"
+          class="text-body-secondary"
+          href="https://www.instagram.com/khanye_johan"
+        >
+          <svg class="bi" width="30" height="30" aria-hidden="true"
+					><use xlink:href="#instagram"></use></svg>
+        </a>
+      </li>
+      <!-- Facebook -->
+      <li class="ms-3">
+        <a class="text-body-secondary" href="www.Facebook.com" aria-label="Facebook">
+          <svg class="bi" width="30" height="30"
+					><use xlink:href="#facebook"></use></svg>
+        </a>
+      </li>
+    </ul>
+>>>>>>> 37eae9135e8242ee49c75b107c6217287e471418
   </div>
 </footer>

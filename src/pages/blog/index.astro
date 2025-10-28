@@ -1,0 +1,24 @@
+---
+// imports.
+import BlogPost from "../../components/BlogPost.astro";
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/BaseTemplate.astro";
+
+// frontmatter properties.
+const blogPosts = await getCollection('blogs');
+const pageTitle = "Blog: Development & More"
+---
+<Layout pageTitle={pageTitle}>
+  <div class="container p-4">
+    <h1>{pageTitle}</h1>
+    <p class="mb-4">This is where I will post about my journey learning Astro & other tech</p>
+  
+    <h2 class="text-muted">Posts:</h2>
+    <ol>{blogPosts.map((post:any) => 
+      <li>
+        <a href={`/posts/${post.id}`}>{post.data.title}</a>
+      </li>
+    )}
+    </ol>
+  </div>
+</Layout>
