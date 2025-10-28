@@ -12,10 +12,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 37eae9135e8242ee49c75b107c6217287e471418
 # environment variables
 .env
 .env.production

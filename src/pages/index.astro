@@ -1,67 +1,4 @@
 ---
-<<<<<<< HEAD
-import "../styles/global.css";
-// Layout.
-import Layout from '../layouts/BaseLayout.astro';
-// Components.
-import Greeting from '../components/Greeting';
-
-// Frontmatter Props.
-const title = "Welcome", pageTitle = "\"Welcome, I'm Johan.\"", 
-  subTitle = "Python Developer • Data Science & Engineering • Web Developer",
-  greetings = ["Saw'bona", "Dumela", "Hi", "Hello", "Bonjour"];
----
-<Layout tabTitle={title} pageTitle={pageTitle} subTitle={subTitle}>
-  <Greeting client:load messages={greetings} />
-
-  <!-- Page Banner -->
-  <div class="bg-[#030712] border-6 border-[#282c35] flex flex-col items-center my-8 py-8 rounded-2xl shadow-2xl">
-    <div class=" flex flex-col sm:flex-row sm:gap-8 items-center gap-6">
-      <!-- image -->
-      <div>
-        <img class="size-48 md:size-60 shadow-xl rounded-full md:rounded-sm" 
-        src="src/img/profile.jpeg" alt="A profile picture of Johan with a big smile" />
-      </div>
-
-      <div class="my-2 inline-block flex-col md:flex-row items-center">
-        <!-- copy -->
-        <div class="my-2 space-x-2 px-3">
-          <legend class="mb-1 font-semibold text-2xl">Biography</legend>
-          <div>
-            <p>
-              I am a problem-solver at heart, passionate about breaking down complex challenges and building efficient solutions. 
-              I started my journey as a developer in 2018 and have since gained experience in developing data-driven applications, 
-              specializing in both frontend and backend development.
-            </p>
-            <p>
-              As a mostly self-taught full-stack and data solutions developer, I have honed my skills in Python, PySpark, and JavaScript. 
-              Beyond development, I have collaborated with business-facing departments to consult on probable solutions, ensuring technical implementations align with business needs. 
-              I thrive in collaborative environments and enjoy working with others to create impactful, scalable solutions.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me enjoying pizza, anime, and Coca-Cola. <em>A real "Otaku"</em>
-            </p>  
-          </div>
-        </div>
-  
-        <!-- buttons -->
-        <button class="font-semibold bg-black border-2 border-sky-100 dark:text-sky-500 dark:border-sky-500 dark:bg-sky-500/10 m-1  px-3 py-3 rounded-sm shadow-2xl">
-          <a href="/projects">View My Projects</a>
-        </button>
-        <button class="font-semibold bg-black border-2 border-sky-100 dark:text-sky-500 dark:border-sky-500 dark:bg-sky-500/10 m-1  px-3 py-3 rounded-sm shadow-2xl">
-          <a href="src/docs/johan_khanye_cv.pdf" target="_blank">View my CV</a>
-        </button>
-        <button class="font-semibold bg-black border-2 border-sky-100 dark:text-sky-500 dark:border-sky-500 dark:bg-sky-500/10 m-1  px-3 py-3 rounded-sm shadow-2xl">
-          <a href="/contact">Let’s Connect</a>
-        </button>
-
-      </div>
-    </div>
-  </div>
-
-
-</Layout>
-=======
 import BaseTemplate from "../layouts/BaseTemplate.astro";
 import HeroSection from "../components/Hero.astro";
 const greetings = ["Saw'bona", "Dumela", "Hi", "Hello", "Bonjour"];
@@ -259,4 +196,3 @@ const greetings = ["Saw'bona", "Dumela", "Hi", "Hello", "Bonjour"];
 		by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
 	</p>
 </BaseTemplate> -->
->>>>>>> 37eae9135e8242ee49c75b107c6217287e471418
