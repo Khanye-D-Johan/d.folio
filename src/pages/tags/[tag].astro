@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 // functions.
 export async function getStaticPaths() {
   // get Unique tags from all blog posts.
-  const blogPosts = await getCollection('blog');
+  const blogPosts = await getCollection('blogs');
   const blogTags = [...new Set(blogPosts.map((post:any)=>post.data.tags).flat())];
 
   return blogTags.map((tag)=> {

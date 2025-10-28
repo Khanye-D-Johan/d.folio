@@ -41,14 +41,12 @@ The `D.Folio` project is structure as follows:
   1. [ ] Phone
   2. [ ] Mail - Send mail feat.(Showcase skill)
   3. [ ] FB - #TODO: Create 'Professional Acc.'
-- [ ] About Me
-  - [ ] Skills
 - [ ] Projects
-- [ ] Blog
 
-_**NB-2-REM**:
-"code fence/Dynamic JS, i.e., `{}` exec. js" is exec. @ build time &
-`.js` scripts are sent to the browser_.
+_**NB-2-REM**_:
+
+- _"code fence/Dynamic JS, i.e., `{}` exec. js" is exec._
+- _@ build time `.js` scripts are sent to the browser_.
 
 ----
 

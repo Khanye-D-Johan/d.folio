@@ -1,20 +1,17 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
 import BaseTemplate from '../layouts/BaseTemplate.astro';
 ---
 
 <BaseTemplate
 	title="About Me"
 	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
 >
-	
-	<div class="container p-4">
+	<div class="container p-4 mt-3">
 		<legend class="display-4">About Me</legend>
 	</div>
 	<div class="container p-4">
 		<!-- Page Banner -->
-		<div class="border-4 home-banner d-flex flex-column justify-items-center my-4 py-4 rounded-2 shadow-xl"
+		<div class="border-4 home-banner d-flex flex-column justify-items-center mt-4 pt-4 rounded-2 shadow-xl"
 		>
 			<div class=" flex flex-col sm:flex-row sm:gap-8 items-center gap-6">
 				<!-- Image -->
@@ -49,6 +46,10 @@ import BaseTemplate from '../layouts/BaseTemplate.astro';
 				</div>
 			</div>
 		</div>
-	</div>
 
+		<div class="container pt-3 pb-5">
+			<legend class="display-6">Skills</legend>
+		</div>
+
+	</div>
 </BaseTemplate>

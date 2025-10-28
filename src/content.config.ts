@@ -1,42 +1,21 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-const blog = defineCollection({
+// Define a `loader` and `schema` for each collection
+const blogs = defineCollection({
 	// Load Markdown and MDX files in the `src/content/blog/` directory.
-	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
-	// Type-check frontmatter using a schema
-	schema: ({ image }) =>
-		z.object({
-			title: z.string(),
-			description: z.string(),
-			// Transform string to Date object
-			pubDate: z.coerce.date(),
-			updatedDate: z.coerce.date().optional(),
-			heroImage: image().optional(),
+	loader: glob({ base: './src/blog', pattern: '**/*.{md,md}' }),
+  schema: z.object({
+		title: z.string(),
+		publishedOn: z.date(),
+		description: z.string(),
+		author: z.string(),
+		image: z.object({
+			url: z.string(),
+			alt: z.string()
 		}),
+		tags: z.array(z.string())
+	})
 });
-
-export const collections = { blog };
-
-// COMPARE::
-// Import the glob loader
-// import { glob } from "astro/loaders";
-// // Import utilities from `astro:content`
-// import { z, defineCollection } from "astro:content";
-// // Define a `loader` and `schema` for each collection
-// const blog = defineCollection({
-//     loader: glob({ pattern: '**/[^_]*.md', base: "./src/blog" }),
-//     schema: z.object({
-//       title: z.string(),
-//       publishedOn: z.date(),
-//       description: z.string(),
-//       author: z.string(),
-//       image: z.object({
-//         url: z.string(),
-//         alt: z.string()
-//       }),
-//       tags: z.array(z.string())
-//     })
-// });
-// // Export a single `collections` object to register your collection(s)
-// export const collections = { blog };
+// Export a single `collections` object to register your collection(s)
+export const collections = { blogs };
