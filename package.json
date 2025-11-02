@@ -10,13 +10,14 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.7",
+    "@astrojs/preact": "^4.0.6",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.6.0",
+    "@tailwindcss/vite": "^4.0.15",
+    "aos": "^2.3.4",
     "astro": "^5.14.6",
     "bootstrap": "^5.3.8",
     "preact": "^10.27.2",
-    "sharp": "^0.34.3",
-    "@astrojs/preact": "^4.0.6",
-    "@tailwindcss/vite": "^4.0.15"
+    "sharp": "^0.34.3"
   }
 }

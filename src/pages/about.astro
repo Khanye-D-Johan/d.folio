@@ -8,40 +8,42 @@ import BaseTemplate from '../layouts/BaseTemplate.astro';
 >
 	<div class="container p-4 mt-3">
 		<legend class="display-4">About Me</legend>
-	</div>
-	<div class="container p-4">
-		<!-- Page Banner -->
-		<div class="border-4 home-banner d-flex flex-column justify-items-center mt-4 pt-4 rounded-2 shadow-xl"
-		>
-			<div class=" flex flex-col sm:flex-row sm:gap-8 items-center gap-6">
-				<!-- Image -->
-				<img class="img-fluid shadow rounded-circle ms-3" 
-					style="height: 200px;width:auto;"
-					src="src/assets/images/profile.jpeg" 
-					alt="A profile picture of Johan with a big smile"
-				/>
-				<!-- Biography x Actions -->
-				<div class="m-2 d-block justify-items-center">
-					<!-- Biography -->
-					<div class="my-4 gap-2 px-3">
-						<legend class="mb-1 fw-light text-muted fs-2"
-						>Biography</legend>
 
-						<div class="container p-4">
-							<p>
-								I am a problem-solver at heart, passionate about breaking down complex challenges and building efficient solutions. 
-								I started my journey as a developer in 2018 and have since gained experience in developing data-driven applications, 
-								specializing in both frontend and backend development.
-							</p>
-							<p>
-								As a mostly self-taught full-stack and data solutions developer, I have honed my skills in Python, PySpark, and JavaScript. 
-								Beyond development, I have collaborated with business-facing departments to consult on probable solutions, ensuring technical implementations align with business needs. 
-								I thrive in collaborative environments and enjoy working with others to create impactful, scalable solutions.
-							</p>
-							<p>
-								When I’m not coding, you’ll find me enjoying pizza, anime, and Coca-Cola. An<em> "Otaku"</em>
-							</p>  
-						</div>
+		<!-- Page Banner -->
+		<div class="border-4 home-banner mt-4 pt-4 rounded-2 shadow-xl">
+			<!-- Image -->
+			<img class="img-fluid shadow rounded-circle ms-3" 
+				style="height: 200px;width:auto;"
+				src="src/assets/images/profile.jpeg" 
+				alt="A profile picture of Johan with a big smile"
+			/>
+			<!-- Biography x Actions -->
+			<div class="m-2">
+				<!-- Biography -->
+				<div class="my-4 gap-2 px-3">
+					<legend class="mb-1 fw-light text-muted fs-2"
+					>Biography</legend>
+
+					<div class="container p-4">
+						<p>
+							I’m Johan “D” Khanye — a Python & Data Engineer with a background in business management. I’ve built large-scale ETL pipelines processing over 15M records daily on Azure, and I’m passionate about building efficient, scalable systems — from data platforms to modern web apps. When not engineering data, I create Django-based tools to help small businesses and property managers go digital.
+						</p>
+
+						<p>
+							I am a problem-solver at heart, passionate about breaking down complex challenges and building efficient solutions. 
+							I started my journey as a developer in 2018 and have since gained experience in developing data-driven applications, 
+							specializing in both frontend and backend development.
+						</p>
+
+						<p>
+							As a mostly self-taught full-stack and data solutions developer, I have honed my skills in Python, PySpark, and JavaScript. 
+							Beyond development, I have collaborated with business-facing departments to consult on probable solutions, ensuring technical implementations align with business needs. 
+							I thrive in collaborative environments and enjoy working with others to create impactful, scalable solutions.
+						</p>
+						
+						<p>
+							When I’m not coding, you’ll find me enjoying pizza, anime, and Coca-Cola. An<em> "Otaku"</em>
+						</p>  
 					</div>
 				</div>
 			</div>
@@ -49,6 +51,55 @@ import BaseTemplate from '../layouts/BaseTemplate.astro';
 
 		<div class="container pt-3 pb-5">
 			<legend class="display-6">Skills</legend>
+			<ol class="list-unstyled">
+				<li class="fw-bold">• Languages:
+					<ul>
+						<li>Python</li>
+						<li>SQL</li>
+						<li>JavaScript</li>
+						<li>RPGLE</li>
+					</ul>
+				</li>
+				<li>• Frameworks:
+					<ul>
+						<li>Django</li>
+						<li>Astro</li>
+						<li>Bootstrap</li>
+					</ul>
+				</li>
+				<li>• Data Tools:
+					<ul>
+						<li>Spark</li>
+						<li>Databricks</li>
+						<li>Azure Data Factory</li>
+					</ul>
+				</li>
+				<li>• Databases
+					<ul>
+						<li>SQL Server</li>
+						<li>PostgreSQL</li>
+						<li>AS400</li>
+						<li>GraphQL</li>
+						<li>MySQL</li>
+						<li>SQLite</li>
+					</ul>
+				</li>
+				<li>• Cloud & Infra:
+					<ul>
+						<li>Azure</li>
+						<li>AWS</li>
+						<li>Docker</li>
+						<li>Nginx</li>
+					</ul>
+				</li>
+				<li>• Others:
+					<ul>
+						<li>Git</li>
+						<li>REST APIs</li>
+						<li>Linux</li>
+					</ul>
+				</li>
+			</ol>
 		</div>
 
 	</div>

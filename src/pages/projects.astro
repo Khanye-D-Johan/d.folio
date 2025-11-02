@@ -1,45 +1,188 @@
 ---
 import BaseTemplate from "../layouts/BaseTemplate.astro";
-import Carousel from "../components/Carousel.astro";
+import AOSInit from "../components/AOSInitialisation";
+import { ENGINEERING_PROJECTS, WEB_APP_PROJECTS, PROJECTS } from "../consts";
+
+// Images
+import { Image } from "astro:assets";
+import underConstructionImage from "../assets/images/under_construction.svg";
+import placeholderImage from "../assets/images/placeholder.png";
 ---
+<!-- client:`idle` Runs AOS Init after FCP. -->
+<AOSInit client:idle />
+
 <BaseTemplate>
-  <Carousel />
-  <section class="py-5 bg-primary text-white text-center">
+  <!--[ Temporary: Under-Construction Image|#TODO: Remove ]-->
+  <Image alt="projects page under-construction"
+    aria-hidden="true" class="bi crown mt-5 img-fluid"
+    fetchpriority="high" src={underConstructionImage}
+    style="width:100%;height:100px;object-fit: cover;"
+  />
+  <!--[ Hero: Short Intro Section ]-->
+  <section class="container py-5 text-center">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <!--[ Title ]-->
+        <h1 class="display-4 fw-light mb-3"
+        >Projects & Case Studies</h1>
+        <!--[ Projects Intro Text ]-->
+        <p class="lead text-muted mx-auto" style="max-width: 700px;">
+          A selection of projects where I've solved real business challenges, from optimizing massive data pipelines to building clean, functional web apps.
+        </p>
+        <!--[ Supplementary Intro Text ]-->
+        <p class="lead text-muted mb-1" style="font-size: 1.1em;">
+          <em class="fw-bold" style="text-decoration:dotted underline;">NB!!!</em> These are a few
+          of the <em>most notable<span class="text-danger p-0 m-0">*</span></em>  projects
+          I have worked on during my this here digital solution research & development journey, in 
+          the information and technology industry. All of which became a reality thanks to all the 
+          wonderful team players I got the honor to work with. <br>
+          <small class="text-muted mb-1"><em><span class="text-danger p-0 m-0">*</span>
+            More like what I can remember</em> &#128540;
+          </small>
+        </p>
+        <!--[ Fav. Quote ]-->
+        <p class="pt-3 text-start">
+          <blockquote class="text-start">
+            <p class="lead highlight border-start border-3 px-3 font-monospace"
+            >Faith in One man is a ship sinking</p>
+            <footer class="blockquote-footer">
+              Kendrick Lamar in <cite title="Mirror, Kendrick Lamar, Mr. Morale & the Big Steppers, 2022."
+              >Mirror, Mr. Morales & The Big Steppers, 2022.</cite>
+            </footer>
+          </blockquote>
+        </p>
+        <!--[ Thanks ]-->
+        <p class="pt-2 text-start text-md-center ">
+          <small>
+            This is to say, Almost All listed projects, where handled and completed with help
+            from my teams and other indirectly involved parties in my life, this section here is my
+            gratitude.
+          </small>
+        </p>
+        <p class="py-4">
+          <a href="/contact" class="btn btn-primary">Enquiries: Contact me</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <!--[ Projects Context Banner ]-->
+  <section class="position-relative text-center py-5">
     <div class="container">
-      <h1 class="display-4 fw-bold">Welcome to Astro + Bootstrap 5</h1>
-      <p class="lead mt-3">A fast, clean, component-based site using Bootstrap utilities.</p>
-      <a href="#" class="btn btn-light btn-lg mt-4">Get Started</a>
+      <h1 class="display-4 fw-light"
+      >Welcome to the D.F<small>OLIO</small></h1>
+      <h2 class="fw-bold mb-3">
+        Turning Ideas into Digital Impact
+      </h2>
+      <p class="text-muted mb-0">
+        Each project represents a challenge turned into a working solution.</p>
+    </div>
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient" style="opacity: 0.50;"></div>
+  </section>
+  <!-- <center><hr class="w-50 my-5"></center> -->
+  
+  <!--[ TBC: Projects' Summaries ]-->
+  <section class="container pb-5">
+    <!-- [ TBD: Project Groups summaries ]
+    <div class="">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Data Engineering</h5>
+              <p class="card-text">Blazing fast static & hybrid web framework.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Web Apps</h5>
+              <p class="card-text">Responsive, mobile-first, and customizable UI components.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Tools & Utilities</h5>
+              <p class="card-text">Combine Astro’s static performance with Bootstrap’s rapid design.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!--[ Project Grouping by Type  ]-->
+    <ul class="nav justify-content-center mb-3 border-top border-bottom">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">All</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Data Engineering</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Web Apps</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tools & Utilities</a>
+      </li>
+    </ul>
+
+    <div class="row g-4 pt-4">
+      {PROJECTS.map((p) => (
+        <div class="col-12 col-md-6 col-lg-4" data-aos="flip-down">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden hover-scale">
+            
+            { p.image ? (
+                <Image alt={p.title} 
+                  class="card-img-top object-fit-cover"
+                  src={p.image}
+                  fetchpriority="high"
+                  style="height: 200px;width: auto;"
+                  loading="lazy"
+                />
+              ) : (
+                <Image src={placeholderImage} alt={p.title} 
+                  class="card-img-top object-fit-cover"
+                  style="height: 200px;width: auto;"
+                  loading="lazy"
+                  fetchpriority="high"
+                />
+              )
+            }
+                
+            <div class="card-body">
+              <h5 class="card-title">{p.title}</h5>
+              <p class="text-muted small mb-2">{p.stack}</p>
+              <p class="card-text">{p.summary}</p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a href={`/projects/${p.slug}`} class="btn btn-outline-primary w-100">View Details</a>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 
-  <section class="container py-5">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Astro</h5>
-            <p class="card-text">Blazing fast static & hybrid web framework.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Bootstrap 5</h5>
-            <p class="card-text">Responsive, mobile-first, and customizable UI components.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Hybrid Power</h5>
-            <p class="card-text">Combine Astro’s static performance with Bootstrap’s rapid design.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!--[ End of page: CTA ]-->
+  <section class="text-center py-5">
+    <h2 class="fw-light mb-3">Want to build something impactful?</h2>
+    <p class="text-muted mb-4"
+    >I'm open for freelance projects and data engineering roles.</p>
+    <a href="/contact" class="btn btn-primary px-4">Let’s Collaborate</a>
   </section>
 </BaseTemplate>
+<style>
+  .hover-scale {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-scale:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  .object-fit-cover {
+    object-fit: cover;
+  }
+</style>
